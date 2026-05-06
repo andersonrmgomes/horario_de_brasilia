@@ -1,67 +1,84 @@
-# Relogio - Horario de Brasilia
+# 🕒 Horário de Brasília - Relógio em Tempo Real
 
-Projeto web simples para exibir a hora atual com atualizacao em tempo real, incluindo ajuste manual de atraso em minutos.
+Projeto web simples, porém funcional, desenvolvido para exibir a hora atual com atualização em tempo real, incluindo o recurso de ajuste manual de atraso em minutos. 
 
-## Visao geral
+🌐 **Acesse online:** [https://andersonrmgomes.github.io/horario_de_brasilia/](https://andersonrmgomes.github.io/horario_de_brasilia/)
 
-Este projeto mostra:
+![Status](https://img.shields.io/badge/Status-Concluído-success)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
-- Relogio digital no formato HH:MM:SS
-- Data atual por extenso em portugues
-- Ajuste de atraso via modal
-- Atalho de teclado para abrir ajuste
-- Secao de doacao e links de referencia no rodape
+---
 
-## Estrutura do projeto
+## 📖 Visão Geral
 
-```
+Este projeto apresenta:
+
+- Relógio digital no formato `HH:MM:SS`.
+- Data atual por extenso em português do Brasil.
+- Ajuste de atraso manual através de um modal.
+- Atalho de teclado para acesso rápido ao ajuste.
+- Seção informativa no rodapé com opções de doação e links úteis.
+
+## 📂 Estrutura do Projeto
+
+```text
 Relogio/
-	index.html
-	css/
-		style.css
-	js/
-		script.js
-	readme.md
+├── css/
+│   └── style.css
+├── img/
+│   └── bandeira-brasil.png
+├── js/
+│   └── script.js
+├── index.html
+└── readme.md
 ```
 
-## Funcionalidades
+## ✨ Funcionalidades
 
-- Atualizacao do relogio a cada 1 segundo
-- Exibicao da data no topo e no rodape
-- Atraso configuravel entre 0 e 1440 minutos
-- Validacao de entrada para impedir valores fora do intervalo
-- Tecla H para abrir o modal de ajuste
-- Tecla Enter no campo para aplicar rapidamente
-- Botao de reset para voltar ao horario atual
+- **Atualização Contínua**: O relógio é atualizado a cada 1 segundo.
+- **Informação de Data**: A data atual é exibida tanto no topo quanto no rodapé da página.
+- **Atraso Configurável**: Permite simular um atraso no relógio entre 0 e 1440 minutos (até 24 horas).
+- **Validação de Entrada**: O sistema previne a inserção de valores inválidos (negativos ou acima de 24 horas).
+- **Atalhos e Acessibilidade**:
+  - Pressione a tecla <kbd>H</kbd> para abrir a janela de ajuste de atraso.
+  - Pressione <kbd>Enter</kbd> dentro do campo para aplicar as alterações instantaneamente.
+- **Botão Reset**: Uma maneira fácil de reverter o relógio para a hora exata atual.
 
-## Como executar
+## 🚀 Como Executar
 
-1. Abra a pasta do projeto no VS Code.
-2. Abra o arquivo index.html no navegador.
-3. O relogio iniciara automaticamente.
+1. Faça o download ou clone o projeto para o seu computador.
+2. Abra a pasta do projeto no VS Code (ou em seu editor preferido).
+3. Abra o arquivo `index.html` em qualquer navegador web moderno.
+4. O relógio será iniciado automaticamente.
 
-## Como usar o ajuste de atraso
+## ⚙️ Como Usar o Ajuste de Atraso
 
-1. Pressione H para abrir o modal.
-2. Digite o valor de atraso em minutos (0 a 1440).
-3. Clique em Aplicar ou pressione Enter.
-4. Para remover o atraso, clique em Resetar.
+1. Com a página aberta, pressione <kbd>H</kbd> no teclado.
+2. No modal que se abrirá, digite quantos minutos deseja atrasar o relógio (de 0 a 1440).
+3. Clique em **Aplicar** ou pressione <kbd>Enter</kbd>.
+4. Para desfazer, pressione <kbd>H</kbd> novamente e clique no botão **Resetar**.
 
-## Tecnologias
+## 🛠️ Tecnologias Utilizadas
 
-- HTML5
-- CSS3
-- JavaScript (vanilla)
+- **HTML5**: Estruturação semântica da página.
+- **CSS3**: Estilização visual.
+- **JavaScript (Vanilla)**: Lógica principal de funcionamento do relógio e manipulação do DOM.
 
-## Observacoes
+## 📌 Observações Importantes
 
-- O horario exibido depende do relogio local do dispositivo.
-- O ajuste de atraso e visual e aplicado na exibicao do relogio.
-- Alguns links do rodape apontam para paginas externas e caminho absoluto de recurso local.
+- A hora de base exibida na página utiliza o relógio interno do seu próprio dispositivo (computador, celular, etc).
+- O ajuste de atraso afeta apenas a visualização local no momento da navegação.
+- O rodapé contém links de referência e exemplos de integração (como chave PIX para doação).
 
-## Melhorias futuras
+## 🔮 Melhorias Futuras
 
-- Salvar atraso em localStorage para manter configuracao entre recarregamentos
-- Botao visivel para abrir ajuste (alem do atalho H)
-- Normalizar encoding UTF-8 em todos os textos acentuados
-- Adicionar testes basicos de comportamento do relogio
+- [ ] Salvar a configuração do atraso no `localStorage` do navegador.
+- [ ] Inserir um ícone ou botão visível na interface principal para abrir o modal de ajustes para usuários de dispositivos móveis.
+- [ ] Adicionar testes de comportamento do relógio.
+- [ ] Adicionar suporte para temas (Dark/Light mode).
+
+---
+
+Feito com dedicação para replicar o portal da hora oficial do Brasil.
