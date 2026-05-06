@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8">
@@ -17,25 +17,26 @@
         <div id="content">
             <h3 id="dia-topo">Carregando...</h3>
             <p id="relogio">00:00:00</p>
-            <p id="automatico">A hora certa é sincronizada automaticamente. Não é necessário recarregar a página.<br></p>
+            <p id="automatico">A hora certa é sincronizada automaticamente. Não é necessário recarregar a página.</p>
+            <noscript><p>JavaScript é necessário para exibir o horário em tempo real.</p></noscript>
         </div>
 
         <!-- Container para controle de atraso -->
-        <div id="delayContainer" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
-            <div style="position: relative; background-color: #f9f9f9; border: 2px solid #ddd; padding: 20px; margin: 10% auto; border-radius: 8px; text-align: center; width: 320px; max-width: 90%;">
-                <button id="hideDelayBtn" style="position: absolute; right: 0; top: -5px; background: none; border: none; font-size: 28px; color: #aaa; cursor: pointer; padding: 0;">&times;</button>
-                <h2 style="margin-top: 0; color: #333;">Atrasar Relógio</h2>
-                <p style="color: #666; margin: 10px 0;">Digite quantos minutos deseja atrasar (0-1440):</p>
-                <input type="number" id="modalDelayMinutes" min="0" max="1440" placeholder="0" style="width: 80%; padding: 8px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box; margin-bottom: 15px;">
+        <div id="delayContainer">
+            <div id="delayModal">
+                <button id="hideDelayBtn">&times;</button>
+                <h2>Atrasar Relógio</h2>
+                <p>Digite quantos minutos deseja atrasar (0-1440):</p>
+                <input type="number" id="modalDelayMinutes" min="0" max="1440" placeholder="0">
                 <br>
-                <button id="modalApplyBtn" style="width: 48%; padding: 10px; background-color: #008000; color: white; border: none; border-radius: 3px; cursor: pointer; font-weight: 600; margin-right: 2%;">Aplicar</button>
-                <button id="modalResetBtn" style="width: 48%; padding: 10px; background-color: #666; color: white; border: none; border-radius: 3px; cursor: pointer; font-weight: 600;">Resetar</button>
+                <button id="modalApplyBtn">Aplicar</button>
+                <button id="modalResetBtn">Resetar</button>
             </div>
         </div>
         <div id="footer">
             <p class="doe">Faça uma DOAÇÃO via PIX de qualquer valor e ajude a manter este site livre de anúncios irritantes. O site da hora certa necessita de servidores com alta capacidade de processamento para que não ocorra sobrecarga no sistema.<br><span class="chave-pix">Chave PIX: <span id="pix">doe@itech.win</span></span><br><span class="qr-code">(<a href="/static/img/qr-code/qr-code-1.7.3695.png" target="_blank" title="QR Code" rel="noopener">doe via QR Code</a>)</span></p>
             <div id="footer2">
-                <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAKCAMAAABcxfTLAAABDlBMVEUAgwAAhAABhAAFhwAChQAAggAAeAAAeQAAAI8AgQADhgD//wA1ogAWiQASiAAyoQAskgBCqACh2QCezACz4QDZ7gC+4gBoswBFqgBvtACGwgCAvAAAgAAAfwABggACgAAAfgAAegAAdwAAfQAAewADhQABhQANhQAMhQAKhAABgwACggAHgwACgwBkWmNdU1QTFoIAAYgFBIODelGcnjXi4jCOh0GZlFCBe0pcZKMzPKFwfKU/SqpscaZOW6ADBJIbG4gAAJQXF5oAAJfa6wHD4QEAeQIAdgNxuAKz1wHz+QDr9AAgiwFQpAFCnAHRzCH07xejqSSgpS2lpyzf3REAeAMAdwOIwQMAbAQAawQ4+OXFAAAAkklEQVQI1yWOVQ7EMBBDZ5q0KSwzMzMzMzPe/yK7USV/2JLlZ0AERPL6rgkCAHIJgmS2GRikeARQAxH3tXXbhIMqL4N0cLVnY7m8tMREhGLBu7+MusN+77zzp3OQz9i1R7U2qQya2tYYAhTZyVmfyvPS4sgUvp+MZ333TuNtSlAdSUXJ6vBEFarj/wfI6vMkAvc/ArkQHCEjgPsAAAAASUVORK5CYII=" width="15" height="10" alt="Bandeira do Brasil" title="Bandeira do Brasil">
+                <p><img src="img/bandeira-brasil.png" width="15" height="10" alt="Bandeira do Brasil" title="Bandeira do Brasil">
                 Brasil (UTC-3) - Horario de Brasília, a hora oficial do Brasil<span class="break8"> • </span><span id="dia-rodape">Carregando...</span></p>
                 <p>© 2003 (v1.0) – 2026 (v5.4) HorarioDeBrasilia.org<br class="br-mb"><span class="span-mb"> • </span><a href="https://www.rmg.co.uk/royal-observatory" target="_blank" title="GMT" rel="noopener">GMT</a> • <a href="https://www.gov.br/observatorio/pt-br" target="_blank" title="ON" rel="noopener">ON</a> • <a href="https://www.time.gov/" target="_blank" title="US Time" rel="noopener">US Time</a> • <a id="contato" href="/contato.html" target="_blank" title="Contato" rel="nofollow">Contato</a></p>
             </div>
