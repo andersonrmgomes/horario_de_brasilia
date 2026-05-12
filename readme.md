@@ -41,6 +41,7 @@ Relogio/
 - **Informação de Data**: A data atual é exibida tanto no topo quanto no rodapé da página.
 - **Ajuste Configurável**: Permite ajustar o relógio entre -1440 e 1440 minutos (até 24 horas para trás ou para frente).
 - **Validação de Entrada**: O sistema previne a inserção de valores inválidos (menores que -1440 ou maiores que 1440).
+- **Persistência do Ajuste**: O valor escolhido é salvo no `localStorage` e reaplicado automaticamente após recarregar a página.
 - **Atalhos e Acessibilidade**:
   - Pressione a tecla <kbd>H</kbd> para abrir a janela de ajuste.
   - Pressione <kbd>Enter</kbd> dentro do campo para aplicar as alterações instantaneamente.
@@ -59,7 +60,8 @@ Relogio/
 2. No modal que se abrirá, digite os minutos de ajuste (de -1440 a 1440).
 3. Use valor positivo para **adiantar** e valor negativo para **atrasar** o relógio.
 4. Clique em **Aplicar** ou pressione <kbd>Enter</kbd>.
-5. Para desfazer, pressione <kbd>H</kbd> novamente e clique no botão **Resetar**.
+5. O ajuste ficará salvo mesmo se você recarregar a página.
+6. Para desfazer, pressione <kbd>H</kbd> novamente e clique no botão **Resetar**.
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -71,11 +73,11 @@ Relogio/
 
 - A hora de base exibida na página utiliza o relógio interno do seu próprio dispositivo (computador, celular, etc).
 - O ajuste de minutos afeta apenas a visualização local no momento da navegação.
+- O ajuste é salvo localmente no navegador (`localStorage`) e pode ser removido pelo botão **Resetar**.
 - O rodapé contém links de referência e exemplos de integração (como chave PIX para doação).
 
 ## 🔮 Melhorias Futuras
 
-- [ ] Salvar a configuração do ajuste no `localStorage` do navegador.
 - [ ] Inserir um ícone ou botão visível na interface principal para abrir o modal de ajustes para usuários de dispositivos móveis.
 - [ ] Adicionar testes de comportamento do relógio.
 - [ ] Adicionar suporte para temas (Dark/Light mode).
