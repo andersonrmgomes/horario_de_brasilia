@@ -5,7 +5,7 @@
     var docRoot = doc.documentElement;
     docRoot.className = 'js';
 
-    var delayMs = 0;
+    var offsetMs = 0;
     var clockTimeout = null;
 
     // Cache de elementos por ID
@@ -26,9 +26,9 @@
         return dias[date.getDay()] + ', ' + date.getDate() + ' de ' + meses[date.getMonth()] + ' de ' + date.getFullYear();
     }
 
-    // Atualiza o relógio a cada segundo
+    // Atualiza o relógio a cada segundo com ajuste em minutos
     function clock() {
-        var now = new Date(Date.now() - delayMs);
+        var now = new Date(Date.now() + offsetMs);
         var h = pad(now.getHours());
         var m = pad(now.getMinutes());
         var s = pad(now.getSeconds());
@@ -50,20 +50,20 @@
         $id('modalDelayMinutes').focus();
     }
 
-    // Aplica o atraso informado no modal
+    // Aplica o ajuste informado no modal (positivo adianta, negativo atrasa)
     function applyDelayFromModal() {
         var minutos = parseInt($id('modalDelayMinutes').value) || 0;
-        if (minutos < 0 || minutos > 1440) {
-            alert('Por favor, insira um valor entre 0 e 1440 minutos');
+        if (minutos < -1440 || minutos > 1440) {
+            alert('Por favor, insira um valor entre -1440 e 1440 minutos');
             return;
         }
-        delayMs = minutos * 60 * 1000;
+        offsetMs = minutos * 60 * 1000;
         hideDelayContainer();
     }
 
-    // Remove o atraso e volta ao horário atual
+    // Remove o ajuste e volta ao horário atual
     function resetDelayFromModal() {
-        delayMs = 0;
+        offsetMs = 0;
         $id('modalDelayMinutes').value = '';
         hideDelayContainer();
     }
@@ -88,7 +88,7 @@
             }
         });
 
-        // Enter no input aplica o atraso
+        // Enter no input aplica o ajuste
         if (inputModal) inputModal.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') applyDelayFromModal();
         });

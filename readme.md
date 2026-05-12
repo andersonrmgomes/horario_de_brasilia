@@ -1,6 +1,6 @@
 # 🕒 Horário de Brasília - Relógio em Tempo Real
 
-Projeto web simples, porém funcional, desenvolvido para exibir a hora atual com atualização em tempo real, incluindo o recurso de ajuste manual de atraso em minutos. 
+Projeto web simples, porém funcional, desenvolvido para exibir a hora atual com atualização em tempo real, incluindo o recurso de ajuste manual em minutos (adiantar ou atrasar). 
 
 🌐 **Acesse online:** [https://andersonrmgomes.github.io/horario_de_brasilia/](https://andersonrmgomes.github.io/horario_de_brasilia/)
 
@@ -17,7 +17,7 @@ Este projeto apresenta:
 
 - Relógio digital no formato `HH:MM:SS`.
 - Data atual por extenso em português do Brasil.
-- Ajuste de atraso manual através de um modal.
+- Ajuste manual de minutos através de um modal.
 - Atalho de teclado para acesso rápido ao ajuste.
 - Seção informativa no rodapé com opções de doação e links úteis.
 
@@ -39,10 +39,10 @@ Relogio/
 
 - **Atualização Contínua**: O relógio é atualizado a cada 1 segundo.
 - **Informação de Data**: A data atual é exibida tanto no topo quanto no rodapé da página.
-- **Atraso Configurável**: Permite simular um atraso no relógio entre 0 e 1440 minutos (até 24 horas).
-- **Validação de Entrada**: O sistema previne a inserção de valores inválidos (negativos ou acima de 24 horas).
+- **Ajuste Configurável**: Permite ajustar o relógio entre -1440 e 1440 minutos (até 24 horas para trás ou para frente).
+- **Validação de Entrada**: O sistema previne a inserção de valores inválidos (menores que -1440 ou maiores que 1440).
 - **Atalhos e Acessibilidade**:
-  - Pressione a tecla <kbd>H</kbd> para abrir a janela de ajuste de atraso.
+  - Pressione a tecla <kbd>H</kbd> para abrir a janela de ajuste.
   - Pressione <kbd>Enter</kbd> dentro do campo para aplicar as alterações instantaneamente.
 - **Botão Reset**: Uma maneira fácil de reverter o relógio para a hora exata atual.
 
@@ -53,12 +53,13 @@ Relogio/
 3. Abra o arquivo `index.html` em qualquer navegador web moderno.
 4. O relógio será iniciado automaticamente.
 
-## ⚙️ Como Usar o Ajuste de Atraso
+## ⚙️ Como Usar o Ajuste de Minutos
 
 1. Com a página aberta, pressione <kbd>H</kbd> no teclado.
-2. No modal que se abrirá, digite quantos minutos deseja atrasar o relógio (de 0 a 1440).
-3. Clique em **Aplicar** ou pressione <kbd>Enter</kbd>.
-4. Para desfazer, pressione <kbd>H</kbd> novamente e clique no botão **Resetar**.
+2. No modal que se abrirá, digite os minutos de ajuste (de -1440 a 1440).
+3. Use valor positivo para **adiantar** e valor negativo para **atrasar** o relógio.
+4. Clique em **Aplicar** ou pressione <kbd>Enter</kbd>.
+5. Para desfazer, pressione <kbd>H</kbd> novamente e clique no botão **Resetar**.
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -69,12 +70,12 @@ Relogio/
 ## 📌 Observações Importantes
 
 - A hora de base exibida na página utiliza o relógio interno do seu próprio dispositivo (computador, celular, etc).
-- O ajuste de atraso afeta apenas a visualização local no momento da navegação.
+- O ajuste de minutos afeta apenas a visualização local no momento da navegação.
 - O rodapé contém links de referência e exemplos de integração (como chave PIX para doação).
 
 ## 🔮 Melhorias Futuras
 
-- [ ] Salvar a configuração do atraso no `localStorage` do navegador.
+- [ ] Salvar a configuração do ajuste no `localStorage` do navegador.
 - [ ] Inserir um ícone ou botão visível na interface principal para abrir o modal de ajustes para usuários de dispositivos móveis.
 - [ ] Adicionar testes de comportamento do relógio.
 - [ ] Adicionar suporte para temas (Dark/Light mode).
